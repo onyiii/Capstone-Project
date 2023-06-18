@@ -1,15 +1,9 @@
-import useMediaQuery from "@/hooks/useMediaQuery";
-import { SelectedPage } from "@/shared/types";
-// import backgroundImage from "@/assets/backgroundImage.jpg";
+// import useMediaQuery from "@/hooks/useMediaQuery"
 
-interface Props {
-  setSelectedPage: (value: SelectedPage) => void;
-}
-
-const Home = (setSelectedPage: Props) => {
-  const isAboveMediumScreens = useMediaQuery("(min-width:1060px) ");
+const Home = () => {
+  //   const isAboveMediumScreens = useMediaQuery("(min-width:1060px) ");
   return (
-    <section id="home" className=" gap-16 py-20 md:h-full md:pb-0">
+    <section id="home" className="gap-16 py-20 md:h-full md:pb-0">
       <div>
         <div className="h-screen bg-background-image bg-cover">
           <div className="flex h-full w-full flex-col justify-center backdrop-brightness-50">
@@ -29,7 +23,6 @@ const Home = (setSelectedPage: Props) => {
             </div>
           </div>
         </div>
-        <div>{/* <img src={backgroundImage} alt="background image" /> */}</div>
       </div>
     </section>
   );

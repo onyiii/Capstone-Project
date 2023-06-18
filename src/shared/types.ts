@@ -4,3 +4,9 @@ export enum SelectedPage {
   Contact = "contact",
   Blogs = "blogs",
 }
+export interface CardType {
+  id: number;
+  icon: JSX.Element;
+  title: string;
+  description: string;
+}
