@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
-import Link from "./Link";
+import Links from "./Links";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   isTopOfPage: boolean;
@@ -11,6 +12,7 @@ interface Props {
 }
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
+  const navigate = useNavigate();
   const flexBetween = "flex items-center justify-between";
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px) ");
@@ -29,32 +31,39 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             {isAboveMediumScreens ? (
               <div className={`${flexBetween}  w-full`}>
                 <div className={`${flexBetween} mx-auto gap-8 text-sm`}>
-                  <Link
+                  <Links
                     page="Home"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
-                  <Link
+                  <Links
                     page="About Us"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
-                  <Link
+                  <Links
                     page="Contact"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
-                  <Link
+                  <Links
                     page="Blogs"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
                 </div>
                 <div className={`${flexBetween} gap-5 text-sm`}>
-                  <button className="rounded-md border border-blue-500 px-10 py-2 ">
+                  <button
+                    className="rounded-md border border-blue-500 px-10 py-2 "
+                    onClick={() => navigate("login/login-page")}
+                  >
                     Log in
                   </button>
-                  <button className="rounded-md bg-blue-500 px-10 py-2 text-white">
+
+                  <button
+                    className="rounded-md bg-blue-500 px-10 py-2 text-white"
+                    onClick={() => navigate("login/register")}
+                  >
                     Sign up
                   </button>
                 </div>
@@ -79,22 +88,22 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             </button>
           </div>
           <div className="ml-[33%] flex flex-col gap-8 text-2xl  text-white">
-            <Link
+            <Links
               page="Home"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <Links
               page="About Us"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <Links
               page="Contact"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <Links
               page="Blogs"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}

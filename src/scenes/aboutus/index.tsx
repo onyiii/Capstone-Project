@@ -10,21 +10,18 @@ import Card from "./Card";
 const AboutUs = () => {
   const cards: Array<CardType> = [
     {
-      id: 1,
       icon: <ArrowTrendingUpIcon className="h-6 w-6" />,
       title: "Analytics",
       description:
         "Analytics to track the number of views, likes and comment and also analyze the performance of your articles over a period of time",
     },
     {
-      id: 2,
       icon: <UserGroupIcon className="h-6 w-6" />,
       title: "Social interactions",
       description:
         "Users on the platform can interact with posts they like, comment and engage in discussions",
     },
     {
-      id: 3,
       icon: <NewspaperIcon className="h-6 w-6" />,
       title: "Content creation",
       description:
@@ -32,8 +29,8 @@ const AboutUs = () => {
     },
   ];
   return (
-    <section id="about us" className=" mx-auto mt-20 min-h-full w-5/6 py-20">
-      <div className="mb-15 flex gap-x-20">
+    <section id="about us" className=" mx-auto mt-20 w-5/6 py-20">
+      <div className="mb-15 gap-x-20 md:flex">
         <div>
           <div className=" pb-10 text-2xl font-bold">About Chatter</div>
           <div className="text-sm">
@@ -61,10 +58,10 @@ const AboutUs = () => {
           and able to communicate your great ideas with people
         </div>
       </div>
-      <div className="mt-5 flex items-center justify-between gap-8">
+      <div className="mt-5 items-center justify-between gap-8 lg:flex">
         {cards.map((card: CardType) => (
           <Card
-            key={card.id}
+            key={card.title}
             icon={card.icon}
             title={card.title}
             description={card.description}

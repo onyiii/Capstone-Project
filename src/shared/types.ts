@@ -5,7 +5,6 @@ export enum SelectedPage {
   Blogs = "blogs",
 }
 export interface CardType {
-  id: number;
   icon: JSX.Element;
   title: string;
   description: string;

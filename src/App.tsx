@@ -1,35 +1,22 @@
-import Navbar from "@/scenes/navbar";
-import { useEffect, useState } from "react";
-import { SelectedPage } from "./shared/types";
 import Home from "@/scenes/home";
-import AboutUs from "@/scenes/aboutus";
+import { Routes, Route } from "react-router-dom";
+import Login from "./scenes/login";
+import Signup from "./scenes/signup";
+import LoginPage from "./scenes/loginpage";
+import Register from "./scenes/register";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState<SelectedPage>(
-    SelectedPage.Home
-  );
-  const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY === 0) {
-        setIsTopOfPage(true);
-        setSelectedPage(SelectedPage.Home);
-      } else {
-        setIsTopOfPage(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   return (
     <div className="app">
-      <Navbar
-        isTopOfPage={isTopOfPage}
-        selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage}
-      />
-      <Home />
-      <AboutUs />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="login" element={<Login />}>
+          <Route path="login-page" element={<LoginPage />} />
+          <Route path="register" element={<Register />} />
+        </Route>
+        <Route path="signup" element={<Signup />} />
+      </Routes>
     </div>
   );
 }

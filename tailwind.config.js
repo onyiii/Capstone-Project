@@ -8,9 +8,11 @@ module.exports = {
         "blue-200": "#BBB2F3",
         "blue-400": "#7664E6",
         "blue-100": "#D6D1F8",
+        "yellow-200": "#FFEDCC",
       },
       backgroundImage: {
         "background-image": "url('/backgroundImage.jpg')",
+        "login-signup": "url('/login-signup.jpg')",
       },
     },
     // screens: {

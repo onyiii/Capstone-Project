@@ -7,7 +7,7 @@ interface Props {
   setSelectedPage: (value: SelectedPage) => void;
 }
 
-const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
+const Links = ({ page, selectedPage, setSelectedPage }: Props) => {
   const lowerCasePage = page.toLowerCase().trim() as SelectedPage;
   return (
     <AnchorLink
@@ -20,4 +20,4 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
   );
 };
 
-export default Link;
+export default Links;
