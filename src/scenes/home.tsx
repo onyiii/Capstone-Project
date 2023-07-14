@@ -5,8 +5,10 @@ import Footer from "./footer";
 import Navbar from "./navbar";
 import { useEffect, useState } from "react";
 import { SelectedPage } from "@/shared/types";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
     SelectedPage.Home
   );
@@ -43,7 +45,10 @@ const Home = () => {
                   and Writers
                 </div>
                 <div>
-                  <button className="rounded-md bg-blue-500 px-10 py-2 text-white">
+                  <button
+                    className="rounded-md bg-blue-500 px-10 py-2 text-white"
+                    onClick={() => navigate("auth/register")}
+                  >
                     Get Started
                   </button>
                 </div>

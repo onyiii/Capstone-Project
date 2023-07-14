@@ -21,7 +21,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   return (
     <nav>
       <div
-        className={` ${navBarBackground} ${flexBetween} fixed top-0 z-30 w-full py-3`}
+        className={` ${navBarBackground} ${flexBetween} fixed top-0 z-30 w-full py-3 2xl:mx-auto 2xl:max-w-[1440px]`}
       >
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween}  w-full`}>
@@ -55,14 +55,14 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                 <div className={`${flexBetween} gap-5 text-sm`}>
                   <button
                     className="rounded-md border border-blue-500 px-10 py-2 "
-                    onClick={() => navigate("login/login-page")}
+                    onClick={() => navigate("auth/login-page")}
                   >
                     Log in
                   </button>
 
                   <button
                     className="rounded-md bg-blue-500 px-10 py-2 text-white"
-                    onClick={() => navigate("login/register")}
+                    onClick={() => navigate("auth/register")}
                   >
                     Sign up
                   </button>

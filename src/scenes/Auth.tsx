@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 
-const Login = () => {
+const Auth = () => {
   return (
     <section>
       <div className="flex gap-x-10">
@@ -40,4 +40,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Auth;

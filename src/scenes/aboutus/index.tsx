@@ -29,7 +29,7 @@ const AboutUs = () => {
     },
   ];
   return (
-    <section id="about us" className=" mx-auto mt-20 w-5/6 py-20">
+    <section id="about us" className=" mx-auto w-5/6 py-20 md:mt-20">
       <div className="mb-15 gap-x-20 md:flex">
         <div>
           <div className=" pb-10 text-2xl font-bold">About Chatter</div>
@@ -58,7 +58,7 @@ const AboutUs = () => {
           and able to communicate your great ideas with people
         </div>
       </div>
-      <div className="mt-5 items-center justify-between gap-8 lg:flex">
+      <div className="mt-5 items-center justify-between gap-8 md:flex">
         {cards.map((card: CardType) => (
           <Card
             key={card.title}

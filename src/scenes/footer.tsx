@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <section id="contact" className="mt-20 w-full bg-yellow-200 py-10">
       <div className=" mx-auto w-5/6">
-        <div className=" flex items-stretch justify-evenly gap-x-40">
+        <div className="items-stretch justify-evenly gap-x-40 md:flex">
           <div className=" py-10 text-4xl font-bold leading-8 text-blue-500">
             CHATTER
           </div>

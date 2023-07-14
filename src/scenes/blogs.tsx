@@ -6,7 +6,7 @@ const Blogs = () => {
   return (
     <section id="blogs" className="mt-10 w-full py-10">
       <div className=" mx-auto w-5/6">
-        <div className=" flex gap-x-20">
+        <div className=" gap-x-20 md:flex">
           <div className="flex w-1/3 gap-x-10">
             <div>
               <img
